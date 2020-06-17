@@ -1,6 +1,7 @@
 const inquirer = require("inquirer")
 const fs = require("fs")
 const util = require("util");
+const generateMarkdown = require("../utils/generateMarkdown")
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -112,7 +113,7 @@ function promptUser() {
       }
     ]);
   }
-
+/*
 function generateREADME(answers) {
     return `
     # ${answers.title}
@@ -151,14 +152,16 @@ function generateREADME(answers) {
     `;
 
   }
+  */
   
   async function init() {
     console.log("Start of README generator")
     try {
       const answers = await promptUser();
   
-      const text = generateREADME(answers);
-  
+      // const text = generateREADME(answers);
+      const text = generateMarkdown(answers);
+      
       await writeFileAsync("./dist/README.md", text);
   
       console.log("Successfully wrote to README.md");
@@ -166,6 +169,6 @@ function generateREADME(answers) {
       console.log(err);
     }
   }
-  
+ 
   init();
   
