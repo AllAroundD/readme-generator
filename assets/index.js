@@ -1,9 +1,9 @@
 const inquirer = require("inquirer")
 const fs = require("fs")
-const util = require("util");
+const util = require("util")
 const chalk = require("chalk")
 const generateMarkdown = require("../utils/generateMarkdown")
-const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile)
 const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 // this prompts the user with questions to generate the readme
