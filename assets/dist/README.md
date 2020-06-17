@@ -1,5 +1,6 @@
 
-# project title
+  <img src="https://img.shields.io/badge/AllAroundD-project title-navy">
+  # project title
 
 ## Description:
   project description
@@ -22,10 +23,10 @@
   MIT
 
 ## Contributing
-  no contributors
+  no other contributors
 
 ## Tests
-  tests to be performed...
+  tests to be performed
 
 ## Questions
 ![GitHub Profile Image](https://avatars3.githubusercontent.com/u/64918107?s=460&u=4277fa2bf868713adec524f08700cee517941e82&v=4)
