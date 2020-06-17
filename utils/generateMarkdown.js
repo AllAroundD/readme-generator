@@ -1,8 +1,8 @@
-function generateMarkdown(data) {
+function generateMarkdown(data, nospaceTitle) {
   return `
-  <img src="https://img.shields.io/badge/${data.github}-${data.title}-green">
+<img src="https://img.shields.io/badge/${data.github}-${data.title}-green">
 
-# ${data.title}
+# ${nospaceTitle}
 
 ## Description:
   ${data.description}

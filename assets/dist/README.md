@@ -1,5 +1,5 @@
 
-  <img src="https://img.shields.io/badge/AllAroundD-Readme-Generator-green">
+<img src="https://img.shields.io/badge/AllAroundD-Readme Generator-green">
 
 # Readme-Generator
 
@@ -27,7 +27,7 @@
   
 
 ## Tests
-  The program validates the email address to make sure it includes specific characters. Some prompts are mandatory i.e. project title, description, usage details, tests, GitHub username, email address, GitHub profile picture URL.
+  The program validates the email address to make sure it includes specific characters. Some prompts are mandatory i.e. project title, description, usage details, tests, GitHub username, email address, GitHub profile picture URL. The profile picture URL also checks if it includes 'http'.
 
 ## Questions
 ![GitHub Profile Image](https://avatars3.githubusercontent.com/u/64918107?s=460&u=4277fa2bf868713adec524f08700cee517941e82&v=4)
