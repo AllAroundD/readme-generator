@@ -1,31 +1,31 @@
 
-# This is the project title
+# project title
 
 ## Description:
-  This is the project description
+  project description
 
 ## Table of Contents
-  - [Installation] (#Installation)
-  - [Usage] (Usage)
-  - [License] (License)
-  - [Contributing] (Contributing)
-  - [Tests] (Tests)
-  - [Questions] (Questions)
+  - [Installation] (##Installation)
+  - [Usage] (##Usage)
+  - [License] (##License)
+  - [Contributing] (##Contributing)
+  - [Tests] (##Tests)
+  - [Questions] (##Questions)
 
 ## Installation
-  There is no application to install
+  installation steps
 
 ## Usage
-  User runs application by typing 'node index.js' in the command line and answering questions
+  usage details
 
 ## License
   MIT
 
 ## Contributing
-  There is no other contributing
+  There are no other contributors for this project
 
 ## Tests
-  User runs application and answers questions and ensures that the readme is created with the proper information
+  tests to be performed
 
 ## Questions
 ![GitHub Profile Image](https://avatars3.githubusercontent.com/u/64918107?s=460&u=4277fa2bf868713adec524f08700cee517941e82&v=4)
