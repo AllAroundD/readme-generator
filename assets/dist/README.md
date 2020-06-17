@@ -1,8 +1,9 @@
 
-# This is the project title
+# this is the title
 
 ## Description:
-  This is the project description
+  this is the project description
+
 ## Table of Contents
   1. Installation
   2. Usage
@@ -10,18 +11,23 @@
   4. Contributing
   5. Tests
   6. Questions
+
 ## Installation
   
+
 ## Usage
-  User answers questions via prompts, file is created with the results to be used a readme for the github project.
+  this is where the usage details go
+
 ## License
   
+
 ## Contributing
   
-## Tests
-  User runs the command line and answers the questions. A file is generated with the results. User checks the file to see if the results are correct.
-## Questions:
-<img src=https://avatars3.githubusercontent.com/u/64918107?s=460&u=4277fa2bf868713adec524f08700cee517941e82&v=4>
-https://github.com/AllAroundD/
--If you have any questions, please contact me at dougmoore@use.startmail.com.
 
+## Tests
+  these are the tests that will be performed
+
+## Questions
+![GitHub Profile Image](<img src=https://avatars3.githubusercontent.com/u/64918107?s=460&u=4277fa2bf868713adec524f08700cee517941e82&v=4>)
+[GitHub](https://github.com/AllAroundD/)
+-If you have any questions, please contact me at [email](mailto:dougmoore@use.startmail.com?subject=[GitHub]%20Source%20Question).

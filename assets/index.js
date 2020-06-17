@@ -4,6 +4,7 @@ const util = require("util");
 const generateMarkdown = require("../utils/generateMarkdown")
 
 const writeFileAsync = util.promisify(fs.writeFile);
+const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 function promptUser() {
     return inquirer.prompt([
@@ -97,6 +98,9 @@ function promptUser() {
           if (input == ""){
             return "Error: Please enter the email address"
           }
+          if (!re.test(input)){
+            return "Error: Please enter a valid email address"
+          }
           return true
         }
       },
@@ -113,57 +117,13 @@ function promptUser() {
       }
     ]);
   }
-/*
-function generateREADME(answers) {
-    return `
-    # ${answers.title}
-
-    ## Description:
-      ${answers.description}
-
-    ## Table of Contents
-      1. Installation
-      2. Usage
-      3. License
-      4. Contributing
-      5. Tests
-      6. Questions
-
-    ## Installation
-      ${answers.installation}
-
-    ## Usage
-      ${answers.usage}
-
-    ## License
-      ${answers.license}
-
-    ## Contributing
-      ${answers.contributing}
-
-    ## Tests
-      ${answers.tests}
-  
-    ## Questions:
-    <img src=${answers.profilepic}>
-    https://github.com/${answers.github}/
-
-    -If you have any questions, please contact me at ${answers.email}
-    `;
-
-  }
-  */
   
   async function init() {
     console.log("Start of README generator")
     try {
       const answers = await promptUser();
-  
-      // const text = generateREADME(answers);
       const text = generateMarkdown(answers);
-      
       await writeFileAsync("./dist/README.md", text);
-  
       console.log("Successfully wrote to README.md");
     } catch(err) {
       console.log(err);
