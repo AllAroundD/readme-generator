@@ -1,11 +1,12 @@
 const inquirer = require("inquirer")
 const fs = require("fs")
 const util = require("util");
+const chalk = require("chalk")
 const generateMarkdown = require("../utils/generateMarkdown")
-
 const writeFileAsync = util.promisify(fs.writeFile);
-const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
+// this prompts the user with questions to generate the readme
 function promptUser() {
     return inquirer.prompt([
       {
@@ -14,7 +15,7 @@ function promptUser() {
         message: "What is the Project Title?",
         validate: (input) => {
           if (input == ""){
-            return "Error: Please enter a Project Title"
+            return `Error: Please enter a ${chalk.red('Project Title')}`
           }
           return true
         }
@@ -25,7 +26,7 @@ function promptUser() {
         message: "What is the Project Description?",
         validate: (input) => {
           if (input == ""){
-            return "Error: Please enter a Description"
+            return `Error: Please enter a ${chalk.red('Description')}`
           }
           return true
         }
@@ -33,13 +34,7 @@ function promptUser() {
       {
         type: "input",
         name: "installation",
-        message: "Please provide Installation steps. (hit <enter> if no installation required)",
-        validate: (input) => {
-          if (input == ""){
-            this.installation = "No installation required"
-          }
-          return true
-        }
+        message: "Please provide Installation steps. (hit <enter> if no installation required)"
       },
       {
         type: "input",
@@ -47,7 +42,7 @@ function promptUser() {
         message: "Please provide the Usage details",
         validate: (input) => {
           if (input == ""){
-            return "Error: Please enter the Usage details"
+            return `Error: Please enter the ${chalk.red('Usage details')}`
           }
           return true
         }
@@ -85,7 +80,7 @@ function promptUser() {
         message: "Please enter your GitHub Username: ",
         validate: (input) => {
           if (input == ""){
-            return "Error: Please enter the GitHub Username"
+            return `Error: Please enter the ${chalk.red('GitHub Username')}`
           }
           return true
         }
@@ -96,10 +91,10 @@ function promptUser() {
         message: "Please enter your email address: ",
         validate: (input) => {
           if (input == ""){
-            return "Error: Please enter the email address"
+            return `Error: Please enter the ${chalk.red('email address')}`
           }
-          if (!re.test(input)){
-            return "Error: Please enter a valid email address"
+          if (!regex.test(input)){
+            return `Error: Please enter a valid ${chalk.red('email address')}`
           }
           return true
         }
@@ -110,7 +105,7 @@ function promptUser() {
         message: "Please enter your GitHub profile picture URL: ",
         validate: (input) => {
           if (input == "" | !(input.includes('http'))){
-            return "Error: Please enter a valid url"
+            return `Error: Please enter a ${chalk.red('valid url')}`
           }
           return true
         }
@@ -124,7 +119,7 @@ function promptUser() {
       const answers = await promptUser();
       const text = generateMarkdown(answers);
       await writeFileAsync("./dist/README.md", text);
-      console.log("Successfully wrote to README.md");
+      console.log("Successfully wrote to dist/README.md");
     } catch(err) {
       console.log(err);
     }
