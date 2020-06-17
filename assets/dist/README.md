@@ -28,6 +28,6 @@
   these are the tests to be performed
 
 ## Questions
-![GitHub Profile Image](https://avatars3.githubusercontent.com/u/64918107?s=460&u=4277fa2bf868713adec524f08700cee517941e82&v=4)
-[GitHub](https://github.com/AllAroundD/)
+![GitHub Profile Image](https://avatars3.githubusercontent.com/u/64918107?s=460&u=4277fa2bf868713adec524f08700cee517941e82&v=4)\n
+[GitHub profile](https://github.com/AllAroundD/)\n
 -If you have any questions, please contact me at [dougmoore@use.startmail.com](mailto:dougmoore@use.startmail.com?subject=[GitHub]%20Source%20Question).
