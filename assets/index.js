@@ -117,6 +117,7 @@ function promptUser() {
     console.log("Start of README generator")
     try {
       const answers = await promptUser();
+      answers.title = answers.title.split(" ").join("-")
       const text = generateMarkdown(answers);
       await writeFileAsync("./dist/README.md", text);
       console.log("Successfully wrote to dist/README.md");

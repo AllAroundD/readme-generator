@@ -1,6 +1,7 @@
 
-  <img src="https://img.shields.io/badge/AllAroundD-Readme Generator-green">
-  # Readme Generator
+  <img src="https://img.shields.io/badge/AllAroundD-Readme-Generator-green">
+
+# Readme-Generator
 
 ## Description:
   This is a command line tool to generate a Github readme file for a project based on user's responses to questions about the project. This will allow the creator to spend less time on creating a readme.
