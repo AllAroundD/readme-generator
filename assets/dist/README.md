@@ -5,12 +5,12 @@
   project description
 
 ## Table of Contents
-  - [Installation] (##Installation)
-  - [Usage] (##Usage)
-  - [License] (##License)
-  - [Contributing] (##Contributing)
-  - [Tests] (##Tests)
-  - [Questions] (##Questions)
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [License](#License)
+  - [Contributing](#Contributing)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
 
 ## Installation
   installation steps
@@ -22,10 +22,10 @@
   MIT
 
 ## Contributing
-  There are no other contributors for this project
+  no contributors
 
 ## Tests
-  tests to be performed
+  tests to be performed...
 
 ## Questions
 ![GitHub Profile Image](https://avatars3.githubusercontent.com/u/64918107?s=460&u=4277fa2bf868713adec524f08700cee517941e82&v=4)
