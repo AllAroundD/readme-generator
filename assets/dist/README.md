@@ -1,5 +1,5 @@
 
-<img src="https://img.shields.io/badge/AllAroundD-Readme Generator-green">
+<img src="https://img.shields.io/badge/AllAroundD-Readme%20Generator-green">
 
 # Readme-Generator
 

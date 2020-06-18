@@ -1,4 +1,7 @@
+// This function generates the markdown format for the readme file
 function generateMarkdown(data, nospaceTitle) {
+  // to replace the space it the title for the img
+  data.title = data.title.split(' ').join('%20')
   return `
 <img src="https://img.shields.io/badge/${data.github}-${data.title}-green">
 
